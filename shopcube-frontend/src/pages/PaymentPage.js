@@ -6,6 +6,10 @@ import CheckoutSteps from "../components/CheckoutSteps";
 import { savePaymentMethod } from "../actions/cartActions";
 
 function PaymentPage({ history }) {
+  useEffect(() => {
+    document.title = "Shopcube | Payment";
+  }, []);
+
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
 

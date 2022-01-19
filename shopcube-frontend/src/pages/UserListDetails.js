@@ -27,6 +27,10 @@ function UserListDetails({ history }) {
     }
   }, [dispatch, history, successDelete, userInfo]);
 
+  useEffect(() => {
+    document.title = "Shopcube | Users";
+  }, []);
+
   const deleteHandler = (id) => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       dispatch(deleteUser(id));

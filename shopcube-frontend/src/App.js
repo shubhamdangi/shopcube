@@ -19,6 +19,9 @@ import UserEditScreen from "./pages/UserEditScreen";
 import ProductList from "./pages/ProductList";
 import ProductEditScreen from "./pages/ProductEdit";
 import OrderList from "./pages/OrderList";
+import ReactGA from "react-ga";
+ReactGA.initialize("UA-217584050-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
   return (

@@ -45,6 +45,10 @@ function ProfileScreen({ history }) {
     }
   }, [dispatch, history, userInfo, user, success]);
 
+  useEffect(() => {
+    document.title = "Shopcube | Profile";
+  }, []);
+
   const submitHandler = (e) => {
     e.preventDefault();
 

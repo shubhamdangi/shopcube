@@ -38,6 +38,10 @@ function PlaceOrderScreen({ history }) {
     }
   }, [success, history]);
 
+  useEffect(() => {
+    document.title = "Shopcube | Place Order";
+  }, []);
+
   const placeOrder = () => {
     dispatch(
       createOrder({

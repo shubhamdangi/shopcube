@@ -24,6 +24,10 @@ function LoginScreen({ location, history }) {
     }
   }, [history, userInfo, redirect]);
 
+  useEffect(() => {
+    document.title = "Shopcube | Login";
+  }, []);
+
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(login(email, password));
@@ -54,6 +58,8 @@ function LoginScreen({ location, history }) {
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
+
+        <br />
 
         <Button type="submit" variant="primary">
           Sign In

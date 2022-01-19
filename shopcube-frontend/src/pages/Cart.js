@@ -27,6 +27,10 @@ function Cart({ match, location, history }) {
     }
   }, [dispatch, productId, qty]);
 
+  useEffect(() => {
+    document.title = "Shopcube | Cart";
+  }, []);
+
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
   };

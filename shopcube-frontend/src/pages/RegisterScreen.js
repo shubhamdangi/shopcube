@@ -27,6 +27,10 @@ function RegisterScreen({ location, history }) {
     }
   }, [history, userInfo, redirect]);
 
+  useEffect(() => {
+    document.title = "Shopcube | Register";
+  }, []);
+
   const submitHandler = (e) => {
     e.preventDefault();
 
@@ -39,7 +43,7 @@ function RegisterScreen({ location, history }) {
 
   return (
     <FormContainer>
-      <h1>Sign In</h1>
+      <h1>Register</h1>
       {message && <Message variant="danger">{message}</Message>}
       {error && <Message variant="danger">{error}</Message>}
       {loading && <Loader />}
@@ -87,7 +91,7 @@ function RegisterScreen({ location, history }) {
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
-
+        <br />
         <Button type="submit" variant="primary">
           Register
         </Button>

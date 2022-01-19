@@ -53,6 +53,10 @@ function ProductPage({ match, history }) {
     dispatch(listProductDetails(match.params.id));
   }, [dispatch, match, successProductReview]);
 
+  useEffect(() => {
+    document.title = `Shopcube ${product.name}`;
+  }, []);
+
   const addToCartHandler = () => {
     history.push(`/cart/${match.params.id}?qty=${qty}`);
   };

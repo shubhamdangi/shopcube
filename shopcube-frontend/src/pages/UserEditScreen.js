@@ -42,6 +42,10 @@ function UserEditScreen({ match, history }) {
     }
   }, [user, userId, successUpdate, history]);
 
+  useEffect(() => {
+    document.title = "Shopcube | User";
+  }, []);
+
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(updateUser({ _id: user._id, name, email, isAdmin }));

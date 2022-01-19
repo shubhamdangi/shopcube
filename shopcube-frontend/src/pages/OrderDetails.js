@@ -39,6 +39,10 @@ function OrderDetails({ match, history }) {
     }
   }, [dispatch, order, orderId, successDeliver]);
 
+  useEffect(() => {
+    document.title = "Shopcube | Order Details";
+  }, []);
+
   const deliverHandler = () => {
     dispatch(deliverOrder(order));
   };

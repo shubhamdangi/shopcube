@@ -23,6 +23,10 @@ function OrderList({ history }) {
     }
   }, [dispatch, history, userInfo]);
 
+  useEffect(() => {
+    document.title = "Shopcube | Orders";
+  }, []);
+
   return (
     <div>
       <h1>Orders</h1>

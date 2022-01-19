@@ -59,6 +59,10 @@ function ProductList({ history, match }) {
     keyword,
   ]);
 
+  useEffect(() => {
+    document.title = "Shopcube | Products";
+  }, []);
+
   const deleteHandler = (id) => {
     if (window.confirm("Are you sure you want to delete this product?")) {
       dispatch(deleteProduct(id));

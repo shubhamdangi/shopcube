@@ -52,6 +52,10 @@ function ProductEditScreen({ match, history }) {
     }
   }, [dispatch, product, productId, history, successUpdate]);
 
+  useEffect(() => {
+    document.title = "Shopcube | Add/Edit Product";
+  }, []);
+
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(

@@ -16,6 +16,10 @@ function ShippingScreen({ history }) {
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
   const [country, setCountry] = useState(shippingAddress.country);
 
+  useEffect(() => {
+    document.title = "Shopcube | Shipping";
+  }, []);
+
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(saveShippingAddress({ address, city, postalCode, country }));
