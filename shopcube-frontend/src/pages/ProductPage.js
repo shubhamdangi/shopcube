@@ -54,7 +54,7 @@ function ProductPage({ match, history }) {
   }, [dispatch, match, successProductReview]);
 
   useEffect(() => {
-    document.title = `Shopcube ${product.name}`;
+    document.title = `Shopcube | Product`;
   }, []);
 
   const addToCartHandler = () => {
