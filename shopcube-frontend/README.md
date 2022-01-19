@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+<br/>
+<p align="center"> <img src="https://user-images.githubusercontent.com/51415346/149559891-9cd27384-4fc6-4ec5-8154-0c90d0426f2b.png" width="368" height="112"> </img>  </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+<h3 align="center">Zopstore is an online platfrom where students can buy or sell anything at their college/hostel campus.</h3>
+<hr/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Workflow:
+<p align="center"><img src='https://user-images.githubusercontent.com/51415346/150171041-c06ccfe2-12f8-486c-ad24-53966dd41615.png'></img></p>
+<hr/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<b>You can use zopstore to:</b>
+- Sell/Hand out your unessential things to your juniors/peers eg: Notes, Books, Stationary, Hostel essentials etc.
+- Post about any lost or found item at the campus.
+- Buy pre-owned things from your seniors/peers at a trivial cost.
+- Directly contact the owner through WhatsApp or Call.
+- Sell/Hand out your previous sem Notes, Books, Manuals, and almost anything to your juniors.
+- Sell/Hand out your Hostel essentials which you don't need anymore.
 
-### `npm test`
+# Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[![version](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAF)](#)
+[![Firebase](https://img.shields.io/badge/firebase-20232A.svg?style=for-the-badge&logo=firebase)](#)
+[![react](https://img.shields.io/badge/Material--UI-20232A?style=for-the-badge&logo=material-ui&logoColor=0081CB
+)](#)
+[![CSS3](https://img.shields.io/badge/css3-20232A.svg?style=for-the-badge&logo=css3)](#) <br/>
+<b>Frontend</b>: React.js
+<br>
+<b>Additional NPM Libraries:</b>
+  - react-router-dom
+  - @material-ui/core
+  - @material-ui/icons
+  - @material-ui/lab
+  - react-bootstrap
+  - react-image-file-resizer
+  - react-paginate
+  - react-share
+  - firebase-tools
+  - react-ga
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
+<b>Styling</b>: CSS, Material-UI, Canva and Bootstrap
+<br>
+<b>Database</b>: Firebase Firestore
+<br>
+<b>Authentication and Authorisation</b>: Google OAuth 2.0
+<br>
+<b>Storing Images</b>: Firebase Storage
+<br>
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Upcoming Features
+- Sort and Search by category
+- Add to wishlist
+- Request a product
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<div align="center"><h1>&#127759; visit:<a href="https://zopstore.live"> zopstore.live</a></h1>
+</div>
+<br>
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![LinkedIn](https://img.shields.io/static/v1.svg?label=connect&message=@ishubhamdangi&color=grey&logo=linkedin&style=flat&logoColor=white&colorA=blue)](https://www.linkedin.com/in/ishubhamdangi/) [![Twitter](https://img.shields.io/static/v1.svg?label=connect&message=@ishubhamdangi&color=grey&logo=twitter&style=flat&logoColor=white&colorA=blue)](https://twitter.com/ishubhamdangi) [![Instagram](https://img.shields.io/static/v1.svg?label=follow&message=@ishubhamdangi&color=grey&logo=instagram&style=flat&logoColor=white&colorA=blue)](https://www.instagram.com/ishubhamdangi/) 
