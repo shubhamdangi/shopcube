@@ -1,64 +1,91 @@
+<h1 align="center">SHOPCUBE </h1>
+<h2 align="center">A Highly Customized E-Commerce Web Application</h2>
+
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAF)](#)
+[![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)](#) 
+[![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=brown&labelColor=grey)](#)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](#) 
+[![Postgres](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](#) 
+[![AWS](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](#) 
+
+<hr/>
 <br/>
-<p align="center"> <img src="https://user-images.githubusercontent.com/51415346/149559891-9cd27384-4fc6-4ec5-8154-0c90d0426f2b.png" width="368" height="112"> </img>  </p>
 
+## Application Overview:
 
+<br/>
+<br/>
 
+<p align="center"><img src='https://user-images.githubusercontent.com/51415346/150181671-64d071b3-95e2-489e-9d11-1063d16490a0.png'></img></p>
 
-<h3 align="center">Zopstore is an online platfrom where students can buy or sell anything at their college/hostel campus.</h3>
-<hr/>
+<br/>
 
-## Workflow:
-<p align="center"><img src='https://user-images.githubusercontent.com/51415346/150171041-c06ccfe2-12f8-486c-ad24-53966dd41615.png'></img></p>
-<hr/>
+# Application Links
 
-<b>You can use zopstore to:</b>
-- Sell/Hand out your unessential things to your juniors/peers eg: Notes, Books, Stationary, Hostel essentials etc.
-- Post about any lost or found item at the campus.
-- Buy pre-owned things from your seniors/peers at a trivial cost.
-- Directly contact the owner through WhatsApp or Call.
-- Sell/Hand out your previous sem Notes, Books, Manuals, and almost anything to your juniors.
-- Sell/Hand out your Hostel essentials which you don't need anymore.
+Frontend Source Code -> [https://github.com/shubhamdangi/shopcube/tree/main/shopcube-frontend](https://github.com/shubhamdangi/shopcube/tree/main/shopcube-frontend)
+<br>
+Backend Source Code -> [https://github.com/shubhamdangi/shopcube](https://github.com/shubhamdangi/shopcube)
+<br>
+Deployed URL -> [https://shopcube.herokuapp.com](https://shopcube.herokuapp.com)
+<br>
+API Documentation -> [https://shopcube.herokuapp.com/api-docs](https://shopcube.herokuapp.com/api-docs/)
 
 # Tech Stack
 
-[![version](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAF)](#)
-[![Firebase](https://img.shields.io/badge/firebase-20232A.svg?style=for-the-badge&logo=firebase)](#)
-[![react](https://img.shields.io/badge/Material--UI-20232A?style=for-the-badge&logo=material-ui&logoColor=0081CB
-)](#)
-[![CSS3](https://img.shields.io/badge/css3-20232A.svg?style=for-the-badge&logo=css3)](#) <br/>
 <b>Frontend</b>: React.js
 <br>
-<b>Additional NPM Libraries:</b>
+Additional NPM Libraries:
+  - axios
+  - react-redux
   - react-router-dom
-  - @material-ui/core
-  - @material-ui/icons
-  - @material-ui/lab
+  - react-router-bootstrap
+  - redux-thunk
   - react-bootstrap
-  - react-image-file-resizer
   - react-paginate
-  - react-share
-  - firebase-tools
+  - redux-devtools-extension
   - react-ga
+  - redux
+
+<b>Backend</b>: Django REST Framework
+<br>
+ - List of All Aditional Packages can be found in the [requirements.txt](https://github.com/shubhamdangi/shopcube/blob/main/requirements.txt) file
+<br>
 
 
 <br>
-<b>Styling</b>: CSS, Material-UI, Canva and Bootstrap
+<b>Styling</b>: CSS and Bootstrap
 <br>
-<b>Database</b>: Firebase Firestore
+<b>Database</b>: PostgreSQL RDS On AWS
 <br>
-<b>Authentication and Authorisation</b>: Google OAuth 2.0
+<b>Authentication and Authorisation</b>: JWT authentication (JSON web tokens)
 <br>
-<b>Storing Images</b>: Firebase Storage
-<br>
+<b>Storing Images</b>: AWS S3 Bucket
+
+
+## Database Schema:
+
+<br/>
+<br/>
+
+<p align="center"><img src='https://user-images.githubusercontent.com/51415346/150120040-056aa6d8-b505-4bf0-a6d6-d84c7bc606d0.jpg'></img></p>
+
+<br/>
+
+
+# Application Features:
+  - Full featured shopping cart
+  - Product rating & review system
+  - Top products carousel
+  - User profile with orders
+  - Admin area to manage customers, products & orders
+  - Product search, pagination
+  - Checkout process (shipping, payment method, etc)
+
+
 <br>
 
-# Upcoming Features
-- Sort and Search by category
-- Add to wishlist
-- Request a product
-<br>
-
-<div align="center"><h1>&#127759; visit:<a href="https://zopstore.live"> zopstore.live</a></h1>
+<div align="center"><h1>&#127759; visit:<a href="https://shopcube.herokuapp.com/"> shopcube.herokuapp.com</a></h1>
 </div>
 <br>
 
