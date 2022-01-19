@@ -17,7 +17,6 @@ function Home({ history }) {
 
   useEffect(() => {
     dispatch(listProducts(keyword));
-    document.title = "Shopcube | Home";
   }, [dispatch, keyword]);
   return (
     <div>
