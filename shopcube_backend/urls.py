@@ -28,9 +28,9 @@ schema_view = get_schema_view(
    openapi.Info(
       title="Shopcube API Docs",
       default_version='v1.0.0',
-      description="Shopcube API Documentation - DJango REST Framework",
+    #   description="Shopcube API Documentation",
     #   terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="shubham.d3v@gmail.com"),
+    #   contact=openapi.Contact(email="ishubhamdangi@gmail.com"),
     #   license=openapi.License(name="BSD License"),
    ),
    public=True,
@@ -44,7 +44,7 @@ urlpatterns = [
     path("api/products/", include("base_shopcube.urls.product_urls")),
     path("api/users/", include("base_shopcube.urls.user_urls")),
     path("api/orders/", include("base_shopcube.urls.order_urls")),
-    path("api/docs/", schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path("api-docs/", schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
 
 
