@@ -18,6 +18,11 @@ function Home({ history }) {
   useEffect(() => {
     dispatch(listProducts(keyword));
   }, [dispatch, keyword]);
+
+  useEffect(() => {
+    document.title = "Shopcube | Home";
+  }, []);
+
   return (
     <div>
       {!keyword && <FeedCarousel />}
