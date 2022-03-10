@@ -45,7 +45,7 @@ function Cart({ match, location, history }) {
         <h1>Your Shopping Cart</h1>
         {cartItems.length === 0 ? (
           <Message variant="info">
-            Your cart is empty. <Link to="/">Go Back</Link>
+            There's nothing here. <Link to="/"> Take me home</Link>
           </Message>
         ) : (
           <ListGroup variant="flush">
@@ -99,8 +99,7 @@ function Cart({ match, location, history }) {
           <ListGroup variant="flush">
             <ListGroup.Item>
               <h2>
-                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                items
+                Items ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
               </h2>
               ₹{" "}
               {cartItems.reduce((acc, item) => acc + item.qty * item.price, 0)}

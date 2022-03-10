@@ -221,7 +221,7 @@ function ProductPage({ match, history }) {
                           onChange={(e) => setComment(e.target.value)}
                         ></Form.Control>
                       </Form.Group>
-
+                      <br />
                       <Button
                         disabled={loadingProductReview}
                         type="submit"

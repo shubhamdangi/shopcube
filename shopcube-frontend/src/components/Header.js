@@ -4,6 +4,9 @@ import { Navbar, Nav, Container, Row, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import SearchBar from "./SearchBar";
 import { logout } from "../actions/userActions";
+import Filter from "./Filter";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import PersonIcon from "@material-ui/icons/Person";
 
 function Header() {
   const userLogin = useSelector((state) => state.userLogin);
@@ -25,10 +28,11 @@ function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <SearchBar />
+            <Nav className="ms-left">{/* <Filter /> */}</Nav>
             <Nav className="ms-auto">
               <LinkContainer to="/cart">
                 <Nav.Link>
-                  <i className="fas fa-shopping-cart"></i> Cart
+                  <ShoppingCartIcon /> Cart
                 </Nav.Link>
               </LinkContainer>
 
@@ -45,7 +49,7 @@ function Header() {
               ) : (
                 <LinkContainer to="/login">
                   <Nav.Link>
-                    <i className="fas fa-user"></i> Login
+                    <PersonIcon /> Login
                   </Nav.Link>
                 </LinkContainer>
               )}

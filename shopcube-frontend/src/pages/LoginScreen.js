@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import FormContainer from "../components/FormContainer";
 import { login } from "../actions/userActions";
+import Button from "@material-ui/core/Button";
 
 function LoginScreen({ location, history }) {
   const [email, setEmail] = useState("");
@@ -35,12 +36,12 @@ function LoginScreen({ location, history }) {
 
   return (
     <FormContainer>
-      <h1>Sign In</h1>
+      <h1>Login to Shopcube</h1>
       {error && <Message variant="danger">{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="email">
-          <Form.Label>Email Address</Form.Label>
+          <Form.Label>Email </Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter Email"
@@ -61,8 +62,15 @@ function LoginScreen({ location, history }) {
 
         <br />
 
-        <Button type="submit" variant="primary">
-          Sign In
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={submitHandler}
+          style={{
+            textTransform: "none",
+          }}
+        >
+          Login
         </Button>
       </Form>
 
@@ -70,7 +78,7 @@ function LoginScreen({ location, history }) {
         <Col>
           Don't have an account?{" "}
           <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
-            Register
+            Sign Up
           </Link>
         </Col>
       </Row>
