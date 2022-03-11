@@ -19,7 +19,7 @@ function Header() {
 
   return (
     <header>
-      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+      <Navbar bg="dark" variant="dark" expand="lg" fixed="top" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>SHOPCUBE</Navbar.Brand>
@@ -53,7 +53,6 @@ function Header() {
                   </Nav.Link>
                 </LinkContainer>
               )}
-
               {userInfo && userInfo.isAdmin && (
                 <NavDropdown title="Admin" id="adminmenue">
                   <LinkContainer to="/admin/users">

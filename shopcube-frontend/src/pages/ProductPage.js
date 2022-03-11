@@ -23,6 +23,8 @@ import {
   PRODUCT_CREATE_REVIEW_RESET,
   PRODUCT_DETAILS_RESET,
 } from "../constants/productConstants";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import Button1 from "@material-ui/core/Button";
 
 function ProductPage({ match, history }) {
   const [qty, setQty] = useState(1);
@@ -74,7 +76,7 @@ function ProductPage({ match, history }) {
   return (
     <div>
       <Link to="/" className="btn btn-light my-3">
-        Go Back
+        <ArrowBackIosIcon /> Go Back
       </Link>
       {loading ? (
         <Loader />
@@ -103,7 +105,7 @@ function ProductPage({ match, history }) {
                 <ListGroup.Item>Price: ₹ {product.price}</ListGroup.Item>
 
                 <ListGroup.Item>
-                  Description:{product.description}
+                  <b>About this item: </b> <br /> {product.description}
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -121,7 +123,7 @@ function ProductPage({ match, history }) {
 
                   <ListGroup.Item>
                     <Row>
-                      <Col>Status:</Col>
+                      <Col>Availability:</Col>
                       <Col>
                         {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
                       </Col>
@@ -130,7 +132,7 @@ function ProductPage({ match, history }) {
                   {product.countInStock > 0 && (
                     <ListGroup.Item>
                       <Row>
-                        <Col>Qty</Col>
+                        <Col>Quantity:</Col>
                         <Col xs="auto" className="my-1">
                           <Form.Control
                             as="select"

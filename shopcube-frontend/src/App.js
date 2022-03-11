@@ -27,7 +27,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main className="py-3">
+      <main className="py-3" style={{ marginTop: "12vh" }}>
         <Container>
           <Route path="/" component={Home} exact />
           <Route path="/cart/:id?" component={Cart} />
