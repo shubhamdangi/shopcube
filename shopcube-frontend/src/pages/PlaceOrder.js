@@ -63,7 +63,7 @@ function PlaceOrderScreen({ history }) {
         <Col md={8}>
           <ListGroup variant="flush">
             <ListGroup.Item>
-              <h2>Shipping</h2>
+              <h2>Shipping Address</h2>
 
               <p>
                 <strong>Shipping: </strong>
@@ -75,7 +75,7 @@ function PlaceOrderScreen({ history }) {
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Payment Method</h2>
+              <h2>Payment Mode</h2>
               <p>
                 <strong>Method: </strong>
                 {cart.paymentMethod}
@@ -122,7 +122,7 @@ function PlaceOrderScreen({ history }) {
           <Card>
             <ListGroup variant="flush">
               <ListGroup.Item>
-                <h2>Order Summary</h2>
+                <h2>Order Details</h2>
               </ListGroup.Item>
 
               <ListGroup.Item>
@@ -153,9 +153,9 @@ function PlaceOrderScreen({ history }) {
                 </Row>
               </ListGroup.Item>
 
-              <ListGroup.Item>
+              {/* <ListGroup.Item>
                 {error && <Message variant="danger">{error}</Message>}
-              </ListGroup.Item>
+              </ListGroup.Item> */}
 
               <ListGroup.Item>
                 <Button

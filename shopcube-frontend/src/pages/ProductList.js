@@ -11,6 +11,9 @@ import {
   createProduct,
 } from "../actions/productActions";
 import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
+import NotInterestedIcon from "@material-ui/icons/NotInterested";
+import EditIcon from "@material-ui/icons/Edit";
+import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 
 function ProductList({ history, match }) {
   const dispatch = useDispatch();
@@ -77,12 +80,12 @@ function ProductList({ history, match }) {
     <div>
       <Row className="align-items-center">
         <Col>
-          <h1>Products</h1>
+          <h1>Manage Products</h1>
         </Col>
 
         <Col className="text-right">
           <Button className="my-3" onClick={createProductHandler}>
-            <i className="fas fa-plus"></i> Create Product
+            <i className="fas fa-plus"></i> Add A Product
           </Button>
         </Col>
       </Row>
@@ -107,7 +110,7 @@ function ProductList({ history, match }) {
                 <th>PRICE</th>
                 <th>CATEGORY</th>
                 <th>BRAND</th>
-                <th></th>
+                <th>Edit/Delete</th>
               </tr>
             </thead>
 
@@ -121,19 +124,27 @@ function ProductList({ history, match }) {
                   <td>{product.brand}</td>
 
                   <td>
-                    <LinkContainer to={`/admin/product/${product._id}/edit`}>
-                      <Button variant="light" className="btn-sm">
-                        <i className="fas fa-edit"></i>
-                      </Button>
-                    </LinkContainer>
-
-                    <Button
-                      variant="danger"
-                      className="btn-sm"
-                      onClick={() => deleteHandler(product._id)}
-                    >
-                      <i className="fas fa-trash"></i>
-                    </Button>
+                    {userInfo.id === product.user ? (
+                      <>
+                        <LinkContainer
+                          to={`/admin/product/${product._id}/edit`}
+                        >
+                          <Button variant="light" className="btn-sm">
+                            <EditIcon />
+                          </Button>
+                        </LinkContainer>
+                        &nbsp; &nbsp;
+                        <Button
+                          variant="danger"
+                          className="btn-sm"
+                          onClick={() => deleteHandler(product._id)}
+                        >
+                          <DeleteOutlineIcon />
+                        </Button>
+                      </>
+                    ) : (
+                      <NotInterestedIcon />
+                    )}
                   </td>
                 </tr>
               ))}

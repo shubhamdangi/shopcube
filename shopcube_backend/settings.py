@@ -137,7 +137,6 @@ DATABASES = {
 }
 
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -183,9 +182,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 STATIC_URL = "/static/"
-# for storage path of image
+# for storage path of images
 MEDIA_URL = "/images/"
-# for display url of image
+# for display url of images
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",

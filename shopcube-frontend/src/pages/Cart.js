@@ -13,6 +13,7 @@ import {
 
 import Message from "../components/Message";
 import { addToCart, removeFromCart } from "../actions/cartActions";
+import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 
 function Cart({ match, location, history }) {
   const productId = match.params.id;
@@ -85,7 +86,7 @@ function Cart({ match, location, history }) {
                       variant="light"
                       onClick={() => removeFromCartHandler(item.product)}
                     >
-                      <i className="fas fa-trash"></i>
+                      <DeleteOutlineIcon />
                     </Button>
                   </Col>
                 </Row>
@@ -99,7 +100,8 @@ function Cart({ match, location, history }) {
           <ListGroup variant="flush">
             <ListGroup.Item>
               <h2>
-                Items ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+                Cart Items ({cartItems.reduce((acc, item) => acc + item.qty, 0)}
+                )
               </h2>
               ₹{" "}
               {cartItems.reduce((acc, item) => acc + item.qty * item.price, 0)}

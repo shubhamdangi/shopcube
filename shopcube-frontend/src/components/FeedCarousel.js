@@ -24,7 +24,7 @@ function FeedCarousel() {
     <Carousel
       pause="hover"
       className="bg-dark "
-      style={{ borderRadius: "40px" }}
+      style={{ borderRadius: "10px" }}
     >
       {products.map((product) => (
         <Carousel.Item key={product._id}>

@@ -4,14 +4,16 @@ import { Navbar, Nav, Container, Row, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import SearchBar from "./SearchBar";
 import { logout } from "../actions/userActions";
-import Filter from "./Filter";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import PersonIcon from "@material-ui/icons/Person";
+import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 
 function Header() {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
   const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
 
   const logoutHandler = () => {
     dispatch(logout());
@@ -30,12 +32,6 @@ function Header() {
             <SearchBar />
             <Nav className="ms-left">{/* <Filter /> */}</Nav>
             <Nav className="ms-auto">
-              <LinkContainer to="/cart">
-                <Nav.Link>
-                  <ShoppingCartIcon /> Cart
-                </Nav.Link>
-              </LinkContainer>
-
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id="username">
                   <LinkContainer to="/profile">
@@ -47,18 +43,21 @@ function Header() {
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : (
-                <LinkContainer to="/login">
-                  <Nav.Link>
-                    <PersonIcon /> Login
-                  </Nav.Link>
-                </LinkContainer>
+                <>
+                  <LinkContainer to="/login">
+                    <Nav.Link>
+                      <PersonIcon /> Login
+                    </Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="/seller">
+                    <Nav.Link>
+                      <BusinessCenterIcon /> Login as Seller
+                    </Nav.Link>
+                  </LinkContainer>
+                </>
               )}
               {userInfo && userInfo.isAdmin && (
-                <NavDropdown title="Admin" id="adminmenue">
-                  <LinkContainer to="/admin/users">
-                    <NavDropdown.Item>Users</NavDropdown.Item>
-                  </LinkContainer>
-
+                <NavDropdown title="Manage" id="adminmenue">
                   <LinkContainer to="/admin/productlist">
                     <NavDropdown.Item>Products</NavDropdown.Item>
                   </LinkContainer>
@@ -66,8 +65,16 @@ function Header() {
                   <LinkContainer to="/admin/orderlist">
                     <NavDropdown.Item>Orders</NavDropdown.Item>
                   </LinkContainer>
+                  <LinkContainer to="/admin/users">
+                    <NavDropdown.Item>Users</NavDropdown.Item>
+                  </LinkContainer>
                 </NavDropdown>
-              )}
+              )}{" "}
+              <LinkContainer to="/cart">
+                <Nav.Link>
+                  <ShoppingCartIcon /> Cart ({cartItems.length})
+                </Nav.Link>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>

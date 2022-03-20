@@ -7,9 +7,9 @@ import Message from "../components/Message";
 import FormContainer from "../components/FormContainer";
 import { login } from "../actions/userActions";
 import Button from "@material-ui/core/Button";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 
-function LoginScreen({ location, history }) {
+function SellerLogin({ location, history }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -36,16 +36,16 @@ function LoginScreen({ location, history }) {
   };
 
   const testTrigger = () => {
-    setEmail("jeff@gmail.com");
-    setPassword("root@123");
+    setEmail("seller.singh@gmail.com");
+    setPassword("test@321");
     submitHandler();
   };
 
   return (
     <FormContainer>
       <p style={{ textAlign: "center" }}>
-        <AccountCircleIcon style={{ textAlign: "center", fontSize: "50px" }} />{" "}
-        <br /> <h5>Login to Shopcube </h5>
+        <BusinessCenterIcon style={{ textAlign: "center", fontSize: "50px" }} />{" "}
+        <br /> <h5>Login As Seller </h5>
       </p>{" "}
       <hr />
       {error && <Message variant="danger">{error}</Message>}
@@ -92,16 +92,16 @@ function LoginScreen({ location, history }) {
           Use Test Credentials
         </Button>
       </Form>
-      <Row className="py-3">
+      {/* <Row className="py-3">
         <Col>
           Don't have an account?{" "}
           <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
             Sign Up
           </Link>
         </Col>
-      </Row>
+      </Row> */}
     </FormContainer>
   );
 }
 
-export default LoginScreen;
+export default SellerLogin;

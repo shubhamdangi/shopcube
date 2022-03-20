@@ -102,7 +102,7 @@ function ProductPage({ match, history }) {
                   />
                 </ListGroup.Item>
 
-                <ListGroup.Item>Price: ₹ {product.price}</ListGroup.Item>
+                {/* <ListGroup.Item>Price: ₹ {product.price}</ListGroup.Item> */}
 
                 <ListGroup.Item>
                   <b>About this item: </b> <br /> {product.description}
@@ -172,7 +172,9 @@ function ProductPage({ match, history }) {
             <Col md={6}>
               <h4>Reviews</h4>
               {product.reviews.length === 0 && (
-                <Message variant="info">No Reviews on this product</Message>
+                <Message variant="info">
+                  No Reviews Yet, Be the first to review!
+                </Message>
               )}
 
               <ListGroup variant="flush">

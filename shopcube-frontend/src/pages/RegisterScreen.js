@@ -6,6 +6,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import FormContainer from "../components/FormContainer";
 import { register } from "../actions/userActions";
+import PersonAddIcon from "@material-ui/icons/PersonAdd";
 
 function RegisterScreen({ location, history }) {
   const [name, setName] = useState("");
@@ -43,7 +44,10 @@ function RegisterScreen({ location, history }) {
 
   return (
     <FormContainer>
-      <h1>Register</h1>
+      <p style={{ textAlign: "center" }}>
+        <PersonAddIcon style={{ textAlign: "center", fontSize: "45px" }} />{" "}
+        <br /> <h5>Create An Account </h5>
+      </p>
       {message && <Message variant="danger">{message}</Message>}
       {error && <Message variant="danger">{error}</Message>}
       {loading && <Loader />}

@@ -24,7 +24,7 @@ function SearchBar() {
         name="q"
         onChange={(e) => setKeyword(e.target.value)}
         className="mr-sm-2 ml-sm-5"
-        placeholder="Search for products"
+        placeholder="Search for products and more.."
         style={{
           borderRadius: 18,
         }}

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import { listOrders } from "../actions/orderActions";
+import CloseIcon from "@material-ui/icons/Close";
 
 function OrderList({ history }) {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ function OrderList({ history }) {
 
   return (
     <div>
-      <h1>Orders</h1>
+      <h1>Manage Orders</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -57,25 +58,21 @@ function OrderList({ history }) {
                 <td>₹{order.totalPrice}</td>
 
                 <td>
-                  {order.isPaid ? (
-                    order.paidAt.substring(0, 10)
-                  ) : (
-                    <i className="fas fa-check" style={{ color: "red" }}></i>
-                  )}
+                  {order.isPaid ? order.paidAt.substring(0, 10) : <CloseIcon />}
                 </td>
 
                 <td>
                   {order.isDelivered ? (
                     order.deliveredAt.substring(0, 10)
                   ) : (
-                    <i className="fas fa-check" style={{ color: "red" }}></i>
+                    <CloseIcon />
                   )}
                 </td>
 
                 <td>
                   <LinkContainer to={`/order/${order._id}`}>
                     <Button variant="light" className="btn-sm">
-                      Details
+                      Order Details
                     </Button>
                   </LinkContainer>
                 </td>

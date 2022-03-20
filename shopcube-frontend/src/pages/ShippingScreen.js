@@ -29,7 +29,7 @@ function ShippingScreen({ history }) {
   return (
     <FormContainer>
       <CheckoutSteps step1 step2 />
-      <h1>Shipping</h1>
+      <h1>Shipping Details</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="address">
           <Form.Label>Address</Form.Label>
@@ -54,7 +54,7 @@ function ShippingScreen({ history }) {
         </Form.Group>
 
         <Form.Group controlId="postalCode">
-          <Form.Label>Postal Code</Form.Label>
+          <Form.Label>Pin Code</Form.Label>
           <Form.Control
             required
             type="text"
@@ -74,7 +74,7 @@ function ShippingScreen({ history }) {
             onChange={(e) => setCountry(e.target.value)}
           ></Form.Control>
         </Form.Group>
-
+        <br />
         <Button type="submit" variant="primary">
           Continue
         </Button>

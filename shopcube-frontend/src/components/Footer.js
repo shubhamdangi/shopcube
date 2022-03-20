@@ -7,7 +7,7 @@ function Footer() {
       <hr />
       <footer class="page-footer font-small  special-color-dark pt-4">
         <div class="container">
-          {/* <ul class="list-unstyled list-inline text-center">
+          <ul class="list-unstyled list-inline text-center">
             <li class="list-inline-item">
               <a
                 href="https://twitter.com/ishubhamdangi"
@@ -45,18 +45,18 @@ function Footer() {
                 <i class=" fas fa-envelope fa-lg"> </i>
               </a>
             </li>
-          </ul> */}
+          </ul>
           <div
             class="footer-copyright text-center py-3"
             style={{ marginTop: "-20px", marginBottom: "15px" }}
           >
-            &copy; SHOPCUBE{" "}
-            {/* <a
+            SHOPCUBE by{" "}
+            <a
               style={{ color: "grey", textDecoration: "none" }}
               href="https://shubhamdangi.me"
             >
               Shubham Dangi
-            </a> */}
+            </a>
           </div>
         </div>
       </footer>

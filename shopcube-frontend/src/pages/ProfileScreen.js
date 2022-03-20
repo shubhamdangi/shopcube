@@ -88,7 +88,7 @@ function ProfileScreen({ history }) {
           </Form.Group>
 
           <Form.Group controlId="email">
-            <Form.Label>Email Address</Form.Label>
+            <Form.Label>Email</Form.Label>
             <Form.Control
               required
               type="email"
@@ -138,7 +138,7 @@ function ProfileScreen({ history }) {
                 <th>Date</th>
                 <th>Total</th>
                 <th>Pay Mode</th>
-                <th>Delivered</th>
+                <th>Delivery </th>
                 <th></th>
               </tr>
             </thead>
